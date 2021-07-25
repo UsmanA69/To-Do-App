@@ -9,8 +9,6 @@ function addto(){
     li.appendChild(Text);
 
 
-    
-    //   Edit
 
 
     var editBtn = document.createElement("button");
@@ -20,7 +18,7 @@ function addto(){
     editBtn.setAttribute("onclick","EditItems(this)");
 
      
-    //  Delete
+    
 
     var delBtn = document.createElement("button");
     var delText = document.createTextNode("DELETE");
@@ -30,7 +28,7 @@ function addto(){
     
     To_Do.value = "";
     list.appendChild(li);
-    // console.log(li);
+
   
 }
 
@@ -38,7 +36,7 @@ function deleteItems(e){
     e.parentNode.remove();
     
     
-    // console.log(e.parentNode);
+ 
 }
 
 
@@ -48,13 +46,11 @@ function deleteAll(){
 
 
 
-function EditItems(v){
-    var value = v.parentNode.firstChild.nodeValue;
+function EditItems(x){
+    var value = x.parentNode.firstChild.nodeValue;
     var editTODO = prompt("Enter edit todo",value);
     value = editTODO;
-    v.parentNode.firstChild.nodeValue = editTODO;
+    x.parentNode.firstChild.nodeValue = editTODO;
 
 
-
-    // console.log(v.parentNode.firstChild);
 }
